@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Sphinx_Example' do
+  pod 'Sphinx', :path => '../'
+
+  target 'Sphinx_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

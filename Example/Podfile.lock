@@ -1,0 +1,16 @@
+PODS:
+  - Sphinx (0.1.0)
+
+DEPENDENCIES:
+  - Sphinx (from `../`)
+
+EXTERNAL SOURCES:
+  Sphinx:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Sphinx: fcc297b8fb40b99b6cff5d4f9cdaceec681596c4
+
+PODFILE CHECKSUM: 39b797646f746998e58a9d411189ced752ee219d
+
+COCOAPODS: 1.2.0
