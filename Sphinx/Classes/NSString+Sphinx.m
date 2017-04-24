@@ -21,8 +21,8 @@
 
 - (NSString *)spx_URLDecode {
     NSString *source = [self stringByReplacingOccurrencesOfString:@"+" withString:@"%20"];
-    NSString *result = (NSString *)CFBridgingRelease(CFURLCreateStringByReplacingPercentEscapesUsingEncoding(kCFAllocatorDefault, (CFStringRef)source, CFSTR(""), kCFStringEncodingUTF8));
-    return result;
+    NSString *decodedString = (__bridge_transfer NSString *)CFURLCreateStringByReplacingPercentEscapesUsingEncoding(NULL, (__bridge CFStringRef)source, CFSTR(""), CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding));
+    return decodedString;
 }
 
 - (NSString *)spx_MD5Encode {

@@ -57,8 +57,9 @@
     __block NSMutableArray *tableNameArray = [[NSMutableArray alloc] init];
     [self.queue inDatabase:^(FMDatabase *db) {
         FMResultSet *s = [db executeQuery:@"SELECT name FROM sqlite_master WHERE type = 'table'"];
+        int i = 0;
         while ([s next]) {
-            [tableNameArray addObject:[s stringForColumn:@"name"]];
+            [tableNameArray addObject:@{@"spx_index":@(i++), @"name":[s stringForColumn:@"name"]}];
         }
     }];
     [self close];

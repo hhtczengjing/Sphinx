@@ -10,6 +10,9 @@
 #import "SphinxServerTool.h"
 #import "RoutingHTTPServer+Sphinx.h"
 
+NSString *const SphinxServerDefaultWebRoot = @"SphinxWeb.bundle"; //!< 默认的WEB根目录路径
+const UInt32 SphinxServerDefaultPort = 8080; //默认端口号
+
 @interface Sphinx ()
 
 @property (nonatomic, strong) SphinxServerTool *server;
@@ -31,7 +34,7 @@
 }
     
 + (void)open:(NSString *)dbPath complete:(SphinxServerStartCompleteBlock)complete {
-    [self open:dbPath port:8080 complete:complete];
+    [self open:dbPath port:SphinxServerDefaultPort complete:complete];
 }
 
 + (void)open:(NSString *)dbPath port:(UInt32)port complete:(SphinxServerStartCompleteBlock)complete {
@@ -44,8 +47,8 @@
 }
 
 - (BOOL)start {
-    NSString *root = [[NSBundle mainBundle] pathForResource:@"SphinxWeb.bundle" ofType:nil];
-    UInt32 port = self.serverPort>0?self.serverPort:8080;
+    NSString *root = [[NSBundle mainBundle] pathForResource:SphinxServerDefaultWebRoot ofType:nil];
+    UInt32 port = self.serverPort > 0 ? self.serverPort : SphinxServerDefaultPort;
     BOOL result = [self.server start:root port:port handler:^(RoutingHTTPServer *server) {
         [server spx_registerSphinxServiceHandler:self.dbFilePath];
     }];

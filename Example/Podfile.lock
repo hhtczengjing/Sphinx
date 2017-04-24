@@ -1,5 +1,22 @@
 PODS:
-  - Sphinx (0.1.0)
+  - CocoaAsyncSocket (7.6.0)
+  - CocoaHTTPServer (2.3):
+    - CocoaAsyncSocket
+    - CocoaLumberjack
+  - CocoaLumberjack (3.1.0):
+    - CocoaLumberjack/Default (= 3.1.0)
+    - CocoaLumberjack/Extensions (= 3.1.0)
+  - CocoaLumberjack/Default (3.1.0)
+  - CocoaLumberjack/Extensions (3.1.0):
+    - CocoaLumberjack/Default
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - RoutingHTTPServer (1.0.0):
+    - CocoaHTTPServer (~> 2.3)
+  - Sphinx (0.1.0):
+    - FMDB (~> 2.6.2)
+    - RoutingHTTPServer (~> 1.0.0)
 
 DEPENDENCIES:
   - Sphinx (from `../`)
@@ -9,8 +26,13 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Sphinx: fcc297b8fb40b99b6cff5d4f9cdaceec681596c4
+  CocoaAsyncSocket: b9d5589f07baf9de8f34cc25abd4fcba28f13805
+  CocoaHTTPServer: 5624681fc3473d43b18202f635f9b3abb013b530
+  CocoaLumberjack: 8311463ddf9ee86a06ef92a071dd656c89244500
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  RoutingHTTPServer: fab8b13e725f26720500c146d43c98c11ebc4d47
+  Sphinx: ee3795c100320e10ce4d3be41b9076ee74bc339a
 
-PODFILE CHECKSUM: 39b797646f746998e58a9d411189ced752ee219d
+PODFILE CHECKSUM: ee25387185039e1f4878bd4bddcc56de0d00ee93
 
 COCOAPODS: 1.2.0

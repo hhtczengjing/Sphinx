@@ -10,9 +10,9 @@ Pod::Spec.new do |s|
   s.author           = { 'zengjing' => 'hhtczengjing@gmail.com' }
   s.source           = { :git => 'https://github.com/zengjing/Sphinx.git', :tag => s.version.to_s }
   s.ios.deployment_target = '7.0'
-  s.source_files = 'Sphinx/Classes/**/*'
-  s.resource             = 'Sphinx/Assets/SphinxWeb.bundle'
+  s.source_files    = 'Sphinx/Classes/**/*'
+  s.resource        = 'Sphinx/Assets/SphinxWeb.bundle'
   s.public_header_files = 'Sphinx/Classes/**/*.h'
-  s.dependency 'RoutingHTTPServer', '~> 1.0.1'
+  s.dependency 'RoutingHTTPServer', '~> 1.0.0'
   s.dependency 'FMDB', '~> 2.6.2'
 end
