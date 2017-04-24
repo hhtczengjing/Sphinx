@@ -1,6 +1,0 @@
-framework module Sphinx {
-  umbrella header "Sphinx-umbrella.h"
-
-  export *
-  module * { export * }
-}
