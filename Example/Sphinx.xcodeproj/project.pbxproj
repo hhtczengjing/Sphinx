@@ -7,15 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1945ABD477013DF3425A3400 /* libPods-Sphinx_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6AC0EABA51864D91D376E61 /* libPods-Sphinx_Example.a */; };
+		52EF351C8A1C13BEBFB5BECF /* libPods-Sphinx_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A46C4EB3FAF0CE511E261F28 /* libPods-Sphinx_Example.a */; };
 		5DE511E81EAD894E00B40761 /* example.db in Resources */ = {isa = PBXBuildFile; fileRef = 5DE511E71EAD894E00B40761 /* example.db */; };
+		5DFA154F2144278600A721F0 /* SPXBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFA154E2144278600A721F0 /* SPXBaseViewController.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
 		6003F59E195388D20070C39A /* SPXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* SPXAppDelegate.m */; };
-		6003F5A7195388D20070C39A /* SPXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* SPXViewController.m */; };
+		6003F5A7195388D20070C39A /* SPXHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* SPXHomeViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -37,10 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		17ACCF95D83490F49A667091 /* Sphinx.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Sphinx.podspec; path = ../Sphinx.podspec; sourceTree = "<group>"; };
+		17ACCF95D83490F49A667091 /* Sphinx.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Sphinx.podspec; path = ../Sphinx.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		27D557D2E1737E75CBE6EC80 /* Pods-Sphinx_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sphinx_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sphinx_Example/Pods-Sphinx_Example.release.xcconfig"; sourceTree = "<group>"; };
 		49B09FFBF85326EB444721B8 /* Pods_Sphinx_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sphinx_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DE511E71EAD894E00B40761 /* example.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = example.db; sourceTree = "<group>"; };
+		5DFA154D2144278600A721F0 /* SPXBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPXBaseViewController.h; sourceTree = "<group>"; };
+		5DFA154E2144278600A721F0 /* SPXBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPXBaseViewController.m; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* Sphinx_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sphinx_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -51,8 +54,8 @@
 		6003F59B195388D20070C39A /* Sphinx-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sphinx-Prefix.pch"; sourceTree = "<group>"; };
 		6003F59C195388D20070C39A /* SPXAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPXAppDelegate.h; sourceTree = "<group>"; };
 		6003F59D195388D20070C39A /* SPXAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPXAppDelegate.m; sourceTree = "<group>"; };
-		6003F5A5195388D20070C39A /* SPXViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPXViewController.h; sourceTree = "<group>"; };
-		6003F5A6195388D20070C39A /* SPXViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPXViewController.m; sourceTree = "<group>"; };
+		6003F5A5195388D20070C39A /* SPXHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPXHomeViewController.h; sourceTree = "<group>"; };
+		6003F5A6195388D20070C39A /* SPXHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPXHomeViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* Sphinx_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Sphinx_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -63,8 +66,8 @@
 		6C1E84A88FF1B1172678567B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A46C4EB3FAF0CE511E261F28 /* libPods-Sphinx_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Sphinx_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F69BFAFE1EF7D61D9D1EE21E /* Pods-Sphinx_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sphinx_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sphinx_Example/Pods-Sphinx_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		F6AC0EABA51864D91D376E61 /* libPods-Sphinx_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Sphinx_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9B4652FB86B76797129A83F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,7 +79,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				1945ABD477013DF3425A3400 /* libPods-Sphinx_Example.a in Frameworks */,
+				52EF351C8A1C13BEBFB5BECF /* libPods-Sphinx_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +125,7 @@
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
 				49B09FFBF85326EB444721B8 /* Pods_Sphinx_Tests.framework */,
-				F6AC0EABA51864D91D376E61 /* libPods-Sphinx_Example.a */,
+				A46C4EB3FAF0CE511E261F28 /* libPods-Sphinx_Example.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -133,9 +136,11 @@
 				5DE511E71EAD894E00B40761 /* example.db */,
 				6003F59C195388D20070C39A /* SPXAppDelegate.h */,
 				6003F59D195388D20070C39A /* SPXAppDelegate.m */,
+				5DFA154D2144278600A721F0 /* SPXBaseViewController.h */,
+				5DFA154E2144278600A721F0 /* SPXBaseViewController.m */,
+				6003F5A5195388D20070C39A /* SPXHomeViewController.h */,
+				6003F5A6195388D20070C39A /* SPXHomeViewController.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
-				6003F5A5195388D20070C39A /* SPXViewController.h */,
-				6003F5A6195388D20070C39A /* SPXViewController.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -204,8 +209,7 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				B80EA3E915366CAF2FEB37F7 /* [CP] Embed Pods Frameworks */,
-				4BB4673C61825E459ED3B166 /* [CP] Copy Pods Resources */,
+				A047B5DDBFFC4B7F4BA0DE11 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -241,10 +245,11 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = SPX;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = zengjing;
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
+						DevelopmentTeam = LJ4D6R866M;
 						ProvisioningStyle = Manual;
 					};
 					6003F5AD195388D20070C39A = {
@@ -295,34 +300,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4BB4673C61825E459ED3B166 /* [CP] Copy Pods Resources */ = {
+		A047B5DDBFFC4B7F4BA0DE11 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Sphinx_Example/Pods-Sphinx_Example-resources.sh",
+				"${PODS_ROOT}/../../Sphinx/Assets/SphinxWeb.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SphinxWeb.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sphinx_Example/Pods-Sphinx_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B80EA3E915366CAF2FEB37F7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sphinx_Example/Pods-Sphinx_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DE8318F32D1F3A8957F8CB29 /* [CP] Check Pods Manifest.lock */ = {
@@ -331,13 +324,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sphinx_Example-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -348,8 +344,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* SPXAppDelegate.m in Sources */,
-				6003F5A7195388D20070C39A /* SPXViewController.m in Sources */,
+				6003F5A7195388D20070C39A /* SPXHomeViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				5DFA154F2144278600A721F0 /* SPXBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,14 +404,22 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -452,14 +457,22 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -487,15 +500,16 @@
 			baseConfigurationReference = F69BFAFE1EF7D61D9D1EE21E /* Pods-Sphinx_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = LJ4D6R866M;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sphinx/Sphinx-Prefix.pch";
 				INFOPLIST_FILE = "Sphinx/Sphinx-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.boanda.Sphinx-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "1914c8df-c88d-4f8b-8686-3114623181e1";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.boanda.*";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -505,15 +519,17 @@
 			baseConfigurationReference = 27D557D2E1737E75CBE6EC80 /* Pods-Sphinx_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				DEVELOPMENT_TEAM = LJ4D6R866M;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sphinx/Sphinx-Prefix.pch";
 				INFOPLIST_FILE = "Sphinx/Sphinx-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.boanda.Sphinx-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "7a4c548c-264e-472d-b4b9-25560092fcc4";
+				PROVISIONING_PROFILE_SPECIFIER = "match InHouse com.boanda.*";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

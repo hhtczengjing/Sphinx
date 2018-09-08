@@ -10,7 +10,7 @@
 
 @implementation NSString (SphinxJSONKitSerializing)
 
-- (id)objectFromJSONString {
+- (id)spx_objectFromJSONString {
     NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding];
     return [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
 }
@@ -19,17 +19,17 @@
 
 @implementation NSData (SphinxJSONKitSerializing)
 
-- (id)objectFromJSONData {
+- (id)spx_objectFromJSONData {
     NSData *data = [NSJSONSerialization dataWithJSONObject:self options:NSJSONWritingPrettyPrinted error:nil];
-    NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] ;
-    return str;
+    NSString *result = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] ;
+    return result;
 }
 
 @end
 
 @implementation NSDictionary (SphinxJSONKitSerializing)
 
-- (NSString *)JSONString {
+- (NSString *)spx_JSONString {
     NSData *data = [NSJSONSerialization dataWithJSONObject:self options:NSJSONWritingPrettyPrinted error:nil];
     NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] ;
     return str;
@@ -39,7 +39,7 @@
 
 @implementation NSArray (SphinxJSONKitSerializing)
 
-- (NSString *)JSONString {
+- (NSString *)spx_JSONString {
     NSData *data = [NSJSONSerialization dataWithJSONObject:self options:NSJSONWritingPrettyPrinted error:nil];
     NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] ;
     return str;

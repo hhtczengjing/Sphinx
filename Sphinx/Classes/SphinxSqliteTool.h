@@ -16,13 +16,6 @@
 
 - (NSArray *)tableContentWithSQL:(NSString *)sql;
 
-/**
- *  获取当前字符串的MD5值
- *
- *  @param sql sql语句
- *
- *  @return 查询结果
- */
 - (id)executeSQL:(NSString *)sql;
 
 @end

@@ -1,38 +1,51 @@
 PODS:
-  - CocoaAsyncSocket (7.6.0)
+  - CocoaAsyncSocket (7.6.3)
   - CocoaHTTPServer (2.3):
     - CocoaAsyncSocket
     - CocoaLumberjack
-  - CocoaLumberjack (3.1.0):
-    - CocoaLumberjack/Default (= 3.1.0)
-    - CocoaLumberjack/Extensions (= 3.1.0)
-  - CocoaLumberjack/Default (3.1.0)
-  - CocoaLumberjack/Extensions (3.1.0):
+  - CocoaLumberjack (3.4.2):
+    - CocoaLumberjack/Default (= 3.4.2)
+    - CocoaLumberjack/Extensions (= 3.4.2)
+  - CocoaLumberjack/Default (3.4.2)
+  - CocoaLumberjack/Extensions (3.4.2):
     - CocoaLumberjack/Default
-  - FMDB (2.6.2):
-    - FMDB/standard (= 2.6.2)
-  - FMDB/standard (2.6.2)
+  - FMDB (2.7.2):
+    - FMDB/standard (= 2.7.2)
+  - FMDB/standard (2.7.2)
+  - Masonry (1.1.0)
   - RoutingHTTPServer (1.0.0):
     - CocoaHTTPServer (~> 2.3)
-  - Sphinx (0.1.0):
-    - FMDB (~> 2.6.2)
+  - Sphinx (0.1.1):
+    - FMDB (~> 2.7.2)
     - RoutingHTTPServer (~> 1.0.0)
 
 DEPENDENCIES:
+  - Masonry (~> 1.1.0)
   - Sphinx (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CocoaAsyncSocket
+    - CocoaHTTPServer
+    - CocoaLumberjack
+    - FMDB
+    - Masonry
+    - RoutingHTTPServer
 
 EXTERNAL SOURCES:
   Sphinx:
+    :configuation: DEBUG
     :path: "../"
 
 SPEC CHECKSUMS:
-  CocoaAsyncSocket: b9d5589f07baf9de8f34cc25abd4fcba28f13805
+  CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
   CocoaHTTPServer: 5624681fc3473d43b18202f635f9b3abb013b530
-  CocoaLumberjack: 8311463ddf9ee86a06ef92a071dd656c89244500
-  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  CocoaLumberjack: db7cc9e464771f12054c22ff6947c5a58d43a0fd
+  FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   RoutingHTTPServer: fab8b13e725f26720500c146d43c98c11ebc4d47
-  Sphinx: ee3795c100320e10ce4d3be41b9076ee74bc339a
+  Sphinx: f179556cbc2ff35a33aac5507b07848f3720ce27
 
-PODFILE CHECKSUM: ee25387185039e1f4878bd4bddcc56de0d00ee93
+PODFILE CHECKSUM: 7f433f277a1410733ff6f6300f481c6eb0dd5429
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.5.3

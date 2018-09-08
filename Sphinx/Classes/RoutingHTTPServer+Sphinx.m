@@ -23,7 +23,7 @@
         [result setObject:@"1" forKey:@"result"];
         [result setObject:@[@{@"prop":@"spx_index", @"label":@"序号"}, @{@"prop":@"name", @"label":@"表名"}] forKey:@"column"];
         [result setObject:ary forKey:@"data"];
-        NSString *json = [result JSONString];
+        NSString *json = [result spx_JSONString];
         [self spx_setServiceSupportAccessControl:response];
         [response setHeader:@"Content-Type" value:@"application/json"];
         [response respondWithString:json];
@@ -58,7 +58,7 @@
         }
         [result setObject:dataAry forKey:@"data"];
         
-        NSString *json = [result JSONString];
+        NSString *json = [result spx_JSONString];
         
         [self spx_setServiceSupportAccessControl:response];
         [response setHeader:@"Content-Type" value:@"application/json"];
@@ -96,7 +96,7 @@
                     [dataAry addObject:rowDict];
                 }
                 [result setObject:dataAry forKey:@"data"];
-                json = [result JSONString];
+                json = [result spx_JSONString];
             }
             else {
                 NSDictionary *res = [dbTool executeSQL:sqlStr] ;
@@ -105,11 +105,11 @@
                 [result setObject:@"2" forKey:@"type"];
                 [result addEntriesFromDictionary:res];
                 
-                json = [result JSONString];
+                json = [result spx_JSONString];
             }
         }
         else {
-            json = [@{@"result":@(0)} JSONString];
+            json = [@{@"result":@(0)} spx_JSONString];
         }
         [self spx_setServiceSupportAccessControl:response];
         [response setHeader:@"Content-Type" value:@"application/json"];

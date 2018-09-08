@@ -8,6 +8,7 @@
 
 #import "SphinxSqliteTool.h"
 #import <FMDB/FMDB.h>
+#import "SphinxJSONKit.h"
 
 @interface SphinxSqliteTool () {
     BOOL isDbOpening;
@@ -39,7 +40,17 @@
         else {
             FMResultSet *rs = [db executeQuery:sql];
             while ([rs next]) {
-                [result addObject:[rs resultDictionary]];
+                NSMutableDictionary *item = [[NSMutableDictionary alloc] init];
+                NSDictionary *dict = [rs resultDictionary];
+                [dict enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+                    if([obj isKindOfClass:[NSData class]]) {
+                        [item setObject:@"-" forKey:key];
+                    }
+                    else {
+                        [item setObject:obj forKey:key];
+                    }
+                }];
+                [result addObject:item];
             }
             [rs close];
         }
@@ -72,7 +83,17 @@
     [self.queue inDatabase:^(FMDatabase *db) {
         FMResultSet *s = [db executeQuery:sql];
         while ([s next]) {
-            [result addObject:[s resultDictionary]];
+            NSMutableDictionary *item = [[NSMutableDictionary alloc] init];
+            NSDictionary *dict = [s resultDictionary];
+            [dict enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+                if([obj isKindOfClass:[NSData class]]) {
+                    [item setObject:@"-" forKey:key];
+                }
+                else {
+                    [item setObject:obj forKey:key];
+                }
+            }];
+            [result addObject:item];
         }
     }];
     [self close];

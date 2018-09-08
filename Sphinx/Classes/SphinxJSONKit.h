@@ -10,25 +10,25 @@
 
 @interface NSString (SphinxJSONKitSerializing)
 
-- (id)objectFromJSONString;
+- (id)spx_objectFromJSONString;
 
 @end
 
 @interface NSData (SphinxJSONKitSerializing)
 
-- (id)objectFromJSONData;
+- (id)spx_objectFromJSONData;
 
 @end
 
 
 @interface NSDictionary (SphinxJSONKitSerializing)
 
-- (NSString *)JSONString;
+- (NSString *)spx_JSONString;
 
 @end
 
 @interface NSArray (SphinxJSONKitSerializing)
 
-- (NSString *)JSONString;
+- (NSString *)spx_JSONString;
 
 @end
