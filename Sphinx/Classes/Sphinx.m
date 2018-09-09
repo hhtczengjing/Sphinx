@@ -47,7 +47,8 @@ const UInt32 SphinxServerDefaultPort = 8080; //默认端口号
 }
 
 - (BOOL)start {
-    NSString *root = [[NSBundle mainBundle] pathForResource:SphinxServerDefaultWebRoot ofType:nil];
+    NSBundle *bundle = [NSBundle bundleForClass:[Sphinx class]];
+    NSString *root = [bundle pathForResource:SphinxServerDefaultWebRoot ofType:nil];
     UInt32 port = self.serverPort > 0 ? self.serverPort : SphinxServerDefaultPort;
     BOOL result = [self.server start:root port:port handler:^(RoutingHTTPServer *server) {
         [server spx_registerSphinxServiceHandler:self.dbFilePath];

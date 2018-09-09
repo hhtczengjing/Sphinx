@@ -66,7 +66,7 @@
     }];
     
     //执行SQL语句
-    [self post:@"/execute" withBlock:^(RouteRequest *request, RouteResponse *response) {
+    [self handleMethod:@"POST" withPath:@"/execute" block:^(RouteRequest *request, RouteResponse *response) {
         NSString *sql = [[NSString alloc] initWithData:[request body] encoding:NSUTF8StringEncoding];
         NSArray *ary = [sql componentsSeparatedByString:@"="];
         NSString *json = @"";

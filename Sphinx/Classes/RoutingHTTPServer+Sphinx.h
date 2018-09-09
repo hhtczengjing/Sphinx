@@ -6,7 +6,7 @@
 //  Copyright © 2017年 devzeng.com. All rights reserved.
 //
 
-#import <RoutingHTTPServer/RoutingHTTPServer.h>
+#import "RoutingHTTPServer.h"
 
 @interface RoutingHTTPServer (Sphinx)
 

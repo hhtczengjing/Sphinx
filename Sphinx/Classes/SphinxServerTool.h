@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <RoutingHTTPServer/RoutingHTTPServer.h>
+#import "RoutingHTTPServer.h"
 
 @interface SphinxServerTool : NSObject
 
