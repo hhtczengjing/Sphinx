@@ -14,9 +14,9 @@ Pod::Spec.new do |s|
   s.osx.frameworks   = 'CoreServices', 'Security'
   s.libraries        = 'xml2'
   s.xcconfig         = {"HEADER_SEARCH_PATHS" => "\"$(SDKROOT)/usr/include/libxml2\""}
-  s.source_files     = 'Sphinx/Classes/**/*'
+  s.source_files     = 'Sphinx/{Classes, Vendor}/**/*.{h,m,mm,c,cpp}'
   s.resource         = 'Sphinx/Assets/SphinxWeb.bundle'
-  s.public_header_files = 'Sphinx/Classes/**/*.h'
+  s.public_header_files = 'Sphinx/{Classes, Vendor}/**/*.h'
   s.dependency 'CocoaAsyncSocket', '~> 7.6.3'
   s.dependency 'FMDB', '~> 2.7.2'
 end
