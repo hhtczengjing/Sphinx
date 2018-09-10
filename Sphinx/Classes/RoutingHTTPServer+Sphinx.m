@@ -17,6 +17,31 @@
     SphinxSqliteTool *dbTool = [[SphinxSqliteTool alloc] initWithDBPath:dbFilePath];
     
     //获取所有的表
+    [self spx_regAllTables:dbTool];
+    
+    //获取表里面的全部数据
+    [self spx_regTableDetail:dbTool];
+    
+    //执行SQL语句
+    [self spx_regExecuteSQL:dbTool];
+    
+    //下载数据库文件
+    [self spx_regDownload:dbFilePath];
+}
+
+#pragma mark - Private Methods
+
+- (void)spx_regDownload:(NSString *)dbPath {
+    [self handleMethod:@"GET" withPath:@"/download" block:^(RouteRequest *request, RouteResponse *response) {
+        [self spx_setServiceSupportAccessControl:response];
+        [response setHeader:@"Content-Type" value:@"application/octet-stream"];
+        [response setHeader:@"Content-Disposition" value:[NSString stringWithFormat:@"attachment;filename=%@", [dbPath lastPathComponent]]];
+        NSData *data = [NSData dataWithContentsOfFile:dbPath];
+        [response respondWithData:data];
+    }];
+}
+
+- (void)spx_regAllTables:(SphinxSqliteTool *)dbTool {
     [self handleMethod:@"GET" withPath:@"/tables" block:^(RouteRequest *request, RouteResponse *response) {
         NSArray *ary = [dbTool tableNameList];
         NSMutableDictionary *result = [[NSMutableDictionary alloc] init];
@@ -28,15 +53,16 @@
         [response setHeader:@"Content-Type" value:@"application/json"];
         [response respondWithString:json];
     }];
-    
-    //获取表里面的全部数据
+}
+
+- (void)spx_regTableDetail:(SphinxSqliteTool *)dbTool  {
     [self handleMethod:@"GET" withPath:@"/table/:name" block:^(RouteRequest *request, RouteResponse *response) {
         NSString *tableName = [request param:@"name"];
         NSArray *ary = [dbTool tableContentWithSQL:[NSString stringWithFormat:@"SELECT * FROM %@", tableName]];
         
         NSMutableDictionary *result = [[NSMutableDictionary alloc] init];
         [result setObject:@"1" forKey:@"result"];
-
+        
         //表头
         NSMutableArray *columnAry = [[NSMutableArray alloc] init];
         if(ary && ary.count > 0) {
@@ -64,8 +90,9 @@
         [response setHeader:@"Content-Type" value:@"application/json"];
         [response respondWithString:json];
     }];
-    
-    //执行SQL语句
+}
+
+- (void)spx_regExecuteSQL:(SphinxSqliteTool *)dbTool {
     [self handleMethod:@"POST" withPath:@"/execute" block:^(RouteRequest *request, RouteResponse *response) {
         NSString *sql = [[NSString alloc] initWithData:[request body] encoding:NSUTF8StringEncoding];
         NSArray *ary = [sql componentsSeparatedByString:@"="];
