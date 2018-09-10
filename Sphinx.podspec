@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name             = 'Sphinx'
-  s.version          = '0.2.0'
+  s.version          = '0.2.1'
   s.summary          = 'Sphinx: iOS Sqlite Browser in App.'
   s.description      = <<-DESC
     Sphinx: iOS Sqlite Browser in App.
                        DESC
-  s.homepage         = 'http://blog.devzeng.com'
+  s.homepage         = 'https://github.com/hhtczengjing/Sphinx'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'zengjing' => 'hhtczengjing@gmail.com' }
   s.source           = { :git => 'https://github.com/hhtczengjing/Sphinx.git', :tag => s.version.to_s }

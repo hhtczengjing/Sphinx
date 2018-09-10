@@ -46,6 +46,13 @@ const UInt32 SphinxServerDefaultPort = 8080; //默认端口号
     !complete ? : complete(status, url);
 }
 
++ (void)switchDBLocation:(NSString *)dbPath complete:(SphinxServerStartCompleteBlock)complete {
+    Sphinx *instance = [self sharedInstance];
+    instance.dbFilePath = dbPath;
+    BOOL status = [self restart];
+    !complete ? : complete(status, [instance serviceURL]);
+}
+
 - (BOOL)start {
     NSBundle *bundle = [NSBundle bundleForClass:[Sphinx class]];
     NSString *root = [bundle pathForResource:SphinxServerDefaultWebRoot ofType:nil];
@@ -56,7 +63,13 @@ const UInt32 SphinxServerDefaultPort = 8080; //默认端口号
     return result;
 }
 
-+ (void)close {
++ (BOOL)restart {
+    [self stop];
+    Sphinx *instance = [self sharedInstance];
+    return [instance start];
+}
+
++ (void)stop {
     [[self sharedInstance].server stop];
 }
 
