@@ -10,6 +10,11 @@
 
 @interface RoutingHTTPServer (Sphinx)
 
+/**
+ * 注册REST服务
+ *
+ * @param dbFilePath 数据库文件路径
+ */
 - (void)spx_registerSphinxServiceHandler:(NSString *)dbFilePath;
 
 @end
